@@ -8,16 +8,19 @@ total_size = 0
 status_counts = {}
 line_count = 0
 
+
 # Function to handle keyboard interruptions
 def signal_handler(sig, frame):
     print_statistics()
     sys.exit(0)
+
 
 # Function to print statistics
 def print_statistics():
     print("File size: {}".format(total_size))
     for status_code in sorted(status_counts.keys()):
         print("{}: {}".format(status_code, status_counts[status_code]))
+
 
 # Register the signal handler
 signal.signal(signal.SIGINT, signal_handler)
@@ -26,7 +29,11 @@ signal.signal(signal.SIGINT, signal_handler)
 for line in sys.stdin:
     line_count += 1
     # Parse the line
-    match = re.match(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - \[(.+)\] "GET /projects/260 HTTP/1.1" (\d{3}) (\d+)', line.strip())
+    match = re.match(
+            r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - \[(.+)\] "GET /projects/260 HTTP/1.1" '
+            r'(\d{3}) (\d+)',
+            line.strip()
+            )
     if match:
         total_size += int(match.group(4))
         status_code = int(match.group(3))
@@ -40,4 +47,3 @@ for line in sys.stdin:
 
 # Ensure the script prints statistics on exit
 print_statistics()
-
