@@ -26,7 +26,8 @@ To tackle this project effectively, you should be familiar with the following co
 - **Style**: Your code should follow the PEP 8 style (version 1.7.x).
 - **Executability**: All your files must be executable.
 
-## Tasks
+## Tasks 
+[Thank you H :)]
 
 ### 0. Lockboxes
 
