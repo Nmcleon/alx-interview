@@ -1,7 +1,4 @@
 #!/usr/bin/node
-"""
-Script that prints characters of a Star Wars movie
-"""
 
 const request = require('request');
 
