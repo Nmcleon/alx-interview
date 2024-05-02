@@ -1,6 +1,6 @@
 # 0x08-making_change
 
-# Coin Change Problem README
+## Coin Change Problem README
 
 ## Overview
 The "Change comes from within" project focuses on solving the classic coin change problem using dynamic programming and greedy algorithms. The objective is to determine the minimum number of coins required to make up a given total amount, given a list of coin denominations. This project challenges participants to apply their understanding of algorithms to devise efficient and correct solutions.
