@@ -9,3 +9,4 @@
 8. 0x07-rotate_2d_matrix
 9. 0x08-makingi_change
 10. 0x09-island_perimeter
+11. 0x0A-primegame
